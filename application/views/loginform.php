@@ -9,7 +9,7 @@
 <body>
     <h3>Sign Up</h3>
 
-    <form method='post' action="<?php echo base_url('Home/insert');?>">
+    <form method='post' action="insert">
         <div>
             <div>
                 <input type='text' placeholder='Enter Name ' name='name'/>
