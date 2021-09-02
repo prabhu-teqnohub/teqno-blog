@@ -18,7 +18,7 @@ class Home extends CI_Controller{
     public function add(){
         $this->load->view('loginform');
     }
-    
+
     public function insert(){
        if($this->input->post('submit')){
         $data=array('name'=>$this->input->post('name'),
@@ -41,11 +41,7 @@ class Home extends CI_Controller{
         // echo "Data Inserted";
         // header('location:index');
     }
-    public function getdata(){
-        $data=$this->db->get('login_data');
-        $this->load->view('data', compact($data));
-        
-    }
+    
 }
 
 
