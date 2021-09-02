@@ -7,22 +7,33 @@
     <title>Data</title>
 </head>
 <body>
-    <table>
+
+<h1>User List</h1>
+<td><a href='<?=base_url();?>/Home/add'>Add User</a></td><br/><br/>
+    <table style='border:1px solid ;'>
         <tr>
             <th>SNO</th>
             <th>Name</th>
             <th>Email</th>
             <th>Mobile</th>
+            <th colspan='2'>Action</th>
         </tr>
         <tbody>
+            <?php foreach($totaldata as $item){
+            ?> 
             <tr>
-                <td>1</td>
-                <td>Prabhu</td>
-                <td>prabhu@gmail.com</td>
-                <td>8585</td>
+                <td><?=$item->id?></td>
+                <td><?=$item->name?></td>
+                <td><?=$item->email?></td>
+                <td><?=$item->mobile?></td>
+                <td><a href=''>Edit</a></td>
+                <td><a href=''>Delete</a></td>
             </tr>
         </tbody>
+        <?php } ?>
     </table>
+    
+    
 
     
 </body>
